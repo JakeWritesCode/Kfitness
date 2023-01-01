@@ -3,6 +3,11 @@ from django.db import models
 
 # Create your models here.
 class Exercise(models.Model):
+    """
+    A model that stores user defined exercises along with
+    storing of user weight, rep and set values
+
+    """
     name = models.CharField(max_length=500)
     description = models.TextField()
     weight = models.FloatField()
