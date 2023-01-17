@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello Jake</title>
-</head>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
 <body>
-<h1> Hello Jake
-</h1>
-<h2>Likes big cockadoodles</h2>
+    <section class="hero is-small is-success mb-4">
+        <div class="hero-body">
+            <h1 class="title is-1">K-FITNESS</h1>
+            <p class="subtitle is-5">
+                Fitness don' need to be no SHITNESS
+            </p>
+        </div>
+    </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+        <ul class="sidebar-nav">
+          <li><a href="{% url 'Home' %}">Home</a></li>
+          <li><a href="">All books</a></li>
+          <li><a href="">All authors</a></li>
+        </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 "></div>
+    </div>
+  </div>
 </body>
-</html>
+{% endblock %}
